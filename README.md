@@ -10,17 +10,17 @@
 Este repositorio contiene las tareas del Bootcamp 👨‍💻
 
 
-| DATABASE WITH JAVA 🖥️ 
+| DATABASE WITH JS 🖥️ 
 | ------------- 
-| [ Exercise 1 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-java-2410-ta18/blob/main/src/com/tmbs/exercises/Exercise_01.java)  
-| [ Exercise 2 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-java-2410-ta18/blob/main/src/com/tmbs/exercises/Exercise_02.java)  
-| [ Exercise 3 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-java-2410-ta18/blob/main/src/com/tmbs/exercises/Exercise_03.java)
-| [ Exercise 4 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-java-2410-ta18/blob/main/src/com/tmbs/exercises/Exercise_04.java)     
-| [ Exercise 5 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-java-2410-ta18/blob/main/src/com/tmbs/exercises/Exercise_05.java)  
-| [ Exercise 6 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-java-2410-ta18/blob/main/src/com/tmbs/exercises/Exercise_06.java)  
-| [ Exercise 7 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-java-2410-ta18/blob/main/src/com/tmbs/exercises/Exercise_07.java)  
-| [ Exercise 8 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-java-2410-ta18/blob/main/src/com/tmbs/exercises/Exercise_08.java) 
-| [ Exercise 9 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-java-2410-ta18/blob/main/src/com/tmbs/exercises/Exercise_09.java)  
+| [ Exercise 1 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-Mongo-2310-ta17/blob/main/ejercicio1.js)  
+| [ Exercise 2 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-Mongo-2310-ta17/blob/main/ejercicio2.js)  
+| [ Exercise 3 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-Mongo-2310-ta17/blob/main/ejercicio3.js)
+| [ Exercise 4 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-Mongo-2310-ta17/blob/main/ejercicio4.js)     
+| [ Exercise 5 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-Mongo-2310-ta17/blob/main/ejercicio5.js)  
+| [ Exercise 6 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-Mongo-2310-ta17/blob/main/ejercicio6.js)  
+| [ Exercise 7 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-Mongo-2310-ta17/blob/main/ejercicio7.js)  
+| [ Exercise 8 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-Mongo-2310-ta17/blob/main/ejercicio8.js) 
+| [ Exercise 9 ](https://github.com/TECHMA-Bootcamp-FullStack-Java-Angular/dmb-tsys-Mongo-2310-ta17/blob/main/ejercicio9.js)  
 
 # Craear las bases de datos con MongoDB 
 
