@@ -84,7 +84,7 @@ for (let i = 1; i <= 10; i++) {
   // Inserción en la colección "proyecto"
   db.proyecto.insert({id: `PRJ-${i}`,nombre: `Proyecto ${i}`, horas: i * 10});
 
-  // Inserción en la colección "asignado_a"
+  // Inserción en la colección "asignado_a" cientifico referencia a cientifico.dni y proyecto referencia a proyecto.id
   db.asignado_a.insert({cientifico: dniArray[i-1],proyecto: `PRJ-${i}`});
 }
 

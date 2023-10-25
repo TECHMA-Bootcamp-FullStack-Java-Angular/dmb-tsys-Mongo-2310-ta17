@@ -98,6 +98,40 @@ for (let i = 1; i < 6; i++) {
 }
 
 
+/**
+ * Testamos la integridad de nuetra base de datos
+ *  ESTOS DATO NO SE INSERTARÁ AL NO CUMPLIR LAS VALIDACIONES
+ * 
+ * @returns Document failed validation con un JSON "information"
+ */
+// producto sin el campo "nombre":
+db.productos.insert({ codigo: 6, precio: 600 }) 
+
+//  código que no es un número entero
+db.cajeros.insert({ codigo: "invalido", nom_apels: "Cajero Inválido" })
+
+// máquina registradora con un piso que no es un número entero
+db.maquinas_registradoras.insert({ codigo: 206, piso: "no es un número" })
+
+
+
+
+/**
+ * Testamos los datos referenciados 
+ * @returns JSON con el objeto solicitado
+ */
+
+// Búsqueda de todas las ventas realizadas por un cajero específico en una máquina 
+db.venta.find({ cajero: cajeroID, maquina: maquinaID })
+
+// Búsqueda de productos cuyo precio sea mayor o igual a un valor específico
+db.productos.find({ precio: { $gte: valorMinimo } })
+
+// Búsqueda de todas las ventas que involucran un producto específico
+db.venta.find({ producto: productoID })
+
+// Búsqueda de cajeros que trabajan en máquinas registradoras ubicadas en un piso particular
+db.cajeros.find({ codigo: {  $in: db.maquinas_registradoras.find({ piso: pisoEspecifico }).map(m => m.codigo) }})
 
 
 

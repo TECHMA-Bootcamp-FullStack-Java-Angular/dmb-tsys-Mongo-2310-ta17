@@ -105,6 +105,45 @@ db.createCollection("reserva", {
   }
 });
 
+const dni_profesor = [
+   "12345678",
+   "23456789",
+   "34567890",
+   "45678901",
+   "56789012",
+   "67890123",
+   "78901234",
+   "89012345",
+   "90123456",
+   "98765432"
+];
+ 
+const dni_investigador = [
+   "98765432",
+   "87654321",
+   "76543210",
+   "65432109",
+   "54321098",
+   "43210987",
+   "32109876",
+   "21098765",
+   "10987654",
+   "12345678"
+ ];
+
+ const investigadores = [
+   "Albert Einstein",
+   "Marie Curie",
+   "Isaac Newton",
+   "Charles Darwin",
+   "Stephen Hawking",
+   "Nikola Tesla",
+   "Galileo Galilei",
+   "Jane Goodall",
+   "Richard Feynman",
+   "Carl Sagan"
+ ];
+
 // INSERCIONES 
 for (let i = 1; i <= 10; i++) {
 
@@ -112,13 +151,13 @@ for (let i = 1; i <= 10; i++) {
   db.facultad.insert({ codigo: i, nombre: `Facultad ${i}` });
 
   // Inserción en la colección "investigador"
-  db.investigador.insert({ dni: `DNI${i}`, nombre_apellidos: `Investigador ${i}`, facultad: i, Odni_profesor: `Profesor${i}` });
+  db.investigador.insert({ dni: dni_investigador[i-1] , nombre_apellidos: investigadores[i-1] , facultad: i, Odni_profesor: dni_profesor[i-1] });
 
   // Inserción en la colección "equipo"
-  db.equipo.insert({ num_serie: `SER${i}`, nombre: `Equipo ${i}`, facultad: i, dni_profesor: `Profesor${i}` });
+  db.equipo.insert({ num_serie: `SER${i}`, nombre: `Equipo ${i}`, facultad: i, dni_profesor: dni_profesor[i-1] });
   
-  // Inserción en la colección "reseva"
-  db.reserva.insert({  dni_investigador: `DNI${i}`, num_equipo: `SER${i}`,  comienzo: new Date(),  fin: new Date(),  dni_profesor: `Profesor${i}` });
+  // Inserción en la colección "reseva" dni_profesor referecia a 
+  db.reserva.insert({  dni_investigador: dni_investigador[i-1], num_equipo: `SER${i}`,  comienzo: new Date(),  fin: new Date(),  dni_profesor: dni_profesor[i-1] });
 };
 
 
@@ -141,3 +180,16 @@ db.equipo.insert({ num_serie: 12345, nombre: "Equipo Inválido", facultad: 1, dn
 db.reserva.insert({ dni_investigador: "DNI12345", num_equipo: "SER1", comienzo: new Date(), fin: new Date() });
 
  
+/**
+ * Testamos los datos referenciados 
+ * @returns JSON con el objeto solicitado
+ */
+
+// Buscamos de todos los investigadores de una facultad específica:
+db.investigador.find({ facultad: 3 })
+
+// Buscamos de todas las reservas realizadas por un investigador
+db.reserva.find({ dni_investigador: "10987654"})
+ 
+// Buscamos de equipos asignados a un profesor en una facultad específica
+db.equipo.find({ facultad: 8, dni_profesor: "89012345" })
